@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import CompanyFields from '../Form/CompanyFields.js'
+import IndividualFields from '../Form/IndividualFields.js'
 import Header        from '../Header/header.js';
 import {Row, Input} from 'react-materialize';
 
@@ -38,7 +39,7 @@ class App extends Component {
     var form=null;
     switch (current) {
       case 1: //show individual form
-        //TODO need individual form
+        form=(<IndividualFields/>);
         break;
       case 2://show company form
         form=(<CompanyFields/>);
