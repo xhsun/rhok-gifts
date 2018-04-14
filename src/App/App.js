@@ -10,28 +10,26 @@ class App extends Component {
         super();
         this.state = {
           showForm: 0,
-          disableRadio: ''
+          disableRadio: '',
+          checkInd: true
         }
     }
 
-    handleIndividual=()=>{
-      this.setState({disableRadio: 'disabled'});
-        this.setState({showForm: 1});
+    handleIndividual(e){
+      this.setState({
+        disableRadio: 'disabled',
+        showForm: 1,
+        checkInd:true
+      });
+      console.log("Ind "+this.state.checkInd);
     }
-    handleCompany=()=>{
-      this.setState({disableRadio: 'disabled'});
-        this.setState({showForm: 2});
-    }
-
-    showButtons(){
-      return (
-        <div>
-          <Row>
-            <Input name='orgType' type='radio' value='Individual Donation' label='Individual Donation' onClick={this.handleIndividual} disabled={this.state.disableRadio}/>
-            <Input name='orgType' type='radio' value='Organizational Donation' label='Organizational Donation' onClick={this.handleCompany} disabled={this.state.disableRadio}/>
-        </Row>
-        </div>
-      );
+    handleCompany(e){
+      this.setState({
+        disableRadio: 'disabled',
+        showForm: 2,
+        checkInd:false
+      });
+      console.log(this.state.checkInd);
     }
 
   render() {
@@ -51,8 +49,13 @@ class App extends Component {
     return (
       <div className="App">
        <Header />
-       {this.showButtons()}
-       {form}
+         <div>
+           <Row>
+             <Input name='orgType' type='radio' label='Individual Donation' onClick={this.handleIndividual.bind(this)}/>
+             <Input name='orgType' type='radio' label='Organizational Donation' onClick={this.handleCompany.bind(this)}/>
+           </Row>
+         </div>
+         {form}
       </div>
     );
   }
