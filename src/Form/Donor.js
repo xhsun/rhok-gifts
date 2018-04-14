@@ -7,38 +7,20 @@ class Donor extends Component {
     constructor() {
         super();
         this.state = {
-            showForm: 0,
-            disableRadio: '',
-            checkInd: true
+            showForm: 1
+
         }
     }
 
-    handleIndividual(e) {
+    handleChange(value) {
         this.setState({
-            disableRadio: 'disabled',
-            showForm: 1,
-            checkInd: true
+            showForm: value
         });
-        console.log("Ind " + this.state.checkInd);
     }
     handleCompany(e) {
         this.setState({
-            disableRadio: 'disabled',
-            showForm: 2,
-            checkInd: false
+            showForm: 2
         });
-        console.log(this.state.checkInd);
-    }
-
-    showButtons() {
-        return (
-            <div>
-                <Row>
-                    <Input name='orgType' type='radio' label='Individual Donation' onClick={this.handleIndividual.bind(this)} />
-                    <Input name='orgType' type='radio' label='Organizational Donation' onClick={this.handleCompany.bind(this)} />
-                </Row>
-            </div>
-        );
     }
 
     render() {
@@ -60,7 +42,12 @@ class Donor extends Component {
                 <Row >
                     <Col s={4} m={4} l={4} ><h3>Donor Information</h3></Col>
                 </Row>
-                {this.showButtons()}
+                <div>
+                    <Row>
+                        <a name='orgType' onClick={(e)=>this.handleChange(1)} >Individual Donation</a>
+                        <a name='orgType' onClick={(e)=>this.handleChange(2)}>Organizational Donation</a>
+                    </Row>
+                </div>
                 {form}
             </div>
         );
