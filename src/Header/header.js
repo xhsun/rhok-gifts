@@ -3,14 +3,14 @@ import { Navbar, NavItem} from 'react-materialize';
 import './header.css'
 
 
-const Img = <img src='./Horizontal_Logo_Gifts-In-Kind.jpg' alt={"YourBrand"}/>;
+const Img = <img src='/Vertical_Logo_Gifts In-kind.png' height='100'   alt={"YourBrand"}/>;
 
 class Header extends Component {
 
   render() {
     return (
-        <Navbar brand='logo' right className="teal lighten-2 red-text">
-            <NavItem  href='index.html'>HOME</NavItem>
+        <Navbar brand={Img} right className="white black-text">
+            <NavItem  href='index.html' className="black-text">HOME</NavItem>
             <NavItem  href='index.html'>ABOUT US</NavItem>
             <NavItem  href='index.html'>GET INVOLVED</NavItem>
             <NavItem  href='index.html'>OUR IMPACT</NavItem>
