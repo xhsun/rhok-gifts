@@ -7,18 +7,17 @@ class App extends Component {
   constructor(){
         super();
         this.state = {
-          showInit:true,
           showForm: 0,
           disableRadio: ''
         }
     }
 
     handleIndividual=()=>{
-      this.setState({showInit: false});
+      this.setState({disableRadio: 'disabled'});
         this.setState({showForm: 1});
     }
     handleCompany=()=>{
-      this.setState({showInit: false});
+      this.setState({disableRadio: 'disabled'});
         this.setState({showForm: 2});
     }
 
@@ -26,8 +25,8 @@ class App extends Component {
       return (
         <div>
           <Row>
-    <Input name='orgType' type='radio' value='Individual Donation' label='Individual Donation' onClick={this.handleIndividual} disabled=''/>
-    <Input name='orgType' type='radio' value='Organizational Donation' label='Organizational Donation' onClick={this.handleCompany} disabled=''/>
+    <Input name='orgType' type='radio' value='Individual Donation' label='Individual Donation' onClick={this.handleIndividual} disabled={this.state.disableRadio}/>
+    <Input name='orgType' type='radio' value='Organizational Donation' label='Organizational Donation' onClick={this.handleCompany} disabled={this.state.disableRadio}/>
 </Row>
         </div>
 
@@ -54,7 +53,7 @@ class App extends Component {
     }
     return (
       <div className="App">
-        {this.state.showInit?this.showButtons():null}
+        {this.showButtons()}
         {form}
       </div>
     );
