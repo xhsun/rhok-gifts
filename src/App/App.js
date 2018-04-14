@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import './App.css';
 import CompanyFields from '../Form/CompanyFields.js'
-import {Button, Modal} from 'react-materialize';
+import {Row, Input} from 'react-materialize';
 
 class App extends Component {
   constructor(){
         super();
         this.state = {
           showInit:true,
-          showForm: 0
+          showForm: 0,
+          disableRadio: ''
         }
     }
 
@@ -24,11 +25,17 @@ class App extends Component {
     showButtons(){
       return (
         <div>
-          <Button onClick={this.handleIndividual}>Individual</Button>
-          <Button onClick={this.handleCompany}>Company</Button>
+          <Row>
+    <Input name='orgType' type='radio' value='Individual Donation' label='Individual Donation' onClick={this.handleIndividual} disabled=''/>
+    <Input name='orgType' type='radio' value='Organizational Donation' label='Organizational Donation' onClick={this.handleCompany} disabled=''/>
+</Row>
         </div>
 
       );
+
+
+                // <Button onClick={this.handleIndividual}>Individual</Button>
+                // <Button onClick={this.handleCompany}>Company</Button>
     }
 
   render() {
@@ -47,10 +54,8 @@ class App extends Component {
     }
     return (
       <div className="App">
-        <Modal header='Donate' trigger={<Button>Donate</Button>}>
-          {this.state.showInit?this.showButtons():null}
-          {form}
-        </Modal>
+        {this.state.showInit?this.showButtons():null}
+        {form}
       </div>
     );
   }
