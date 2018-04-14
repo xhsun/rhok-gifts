@@ -8,25 +8,34 @@ class Donor extends Component {
         super();
         this.state = {
             showForm: 0,
-            disableRadio: ''
+            disableRadio: '',
+            checkInd: true
         }
     }
 
-    handleIndividual = () => {
-        this.setState({ disableRadio: 'disabled' });
-        this.setState({ showForm: 1 });
+    handleIndividual(e) {
+        this.setState({
+            disableRadio: 'disabled',
+            showForm: 1,
+            checkInd: true
+        });
+        console.log("Ind " + this.state.checkInd);
     }
-    handleCompany = () => {
-        this.setState({ disableRadio: 'disabled' });
-        this.setState({ showForm: 2 });
+    handleCompany(e) {
+        this.setState({
+            disableRadio: 'disabled',
+            showForm: 2,
+            checkInd: false
+        });
+        console.log(this.state.checkInd);
     }
 
     showButtons() {
         return (
             <div>
                 <Row>
-                    <Input s={2} name='orgType' type='radio' value='Individual Donation' label='Individual Donation' onClick={this.handleIndividual} disabled={this.state.disableRadio} />
-                    <Input s={2} name='orgType' type='radio' value='Organizational Donation' label='Organizational Donation' onClick={this.handleCompany} disabled={this.state.disableRadio} />
+                    <Input name='orgType' type='radio' label='Individual Donation' onClick={this.handleIndividual.bind(this)} />
+                    <Input name='orgType' type='radio' label='Organizational Donation' onClick={this.handleCompany.bind(this)} />
                 </Row>
             </div>
         );
@@ -49,8 +58,8 @@ class Donor extends Component {
         return (
             <div>
                 <Row >
-                    <Col s={4} m={4} l={4} ><h3>Donor Information</h3></Col>                    
-                </Row>                
+                    <Col s={4} m={4} l={4} ><h3>Donor Information</h3></Col>
+                </Row>
                 {this.showButtons()}
                 {form}
             </div>
