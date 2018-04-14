@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import CompanyFields from '../Form/CompanyFields.js'
+import Header        from '../Header/header.js';
 import {Button, Modal} from 'react-materialize';
 
 class App extends Component {
@@ -17,8 +18,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Header />
         <Modal header='Donate' trigger={<Button>Donate</Button>}>
-
         </Modal>
       </div>
     );
