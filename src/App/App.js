@@ -26,16 +26,11 @@ class App extends Component {
       return (
         <div>
           <Row>
-    <Input name='orgType' type='radio' value='Individual Donation' label='Individual Donation' onClick={this.handleIndividual} disabled={this.state.disableRadio}/>
-    <Input name='orgType' type='radio' value='Organizational Donation' label='Organizational Donation' onClick={this.handleCompany} disabled={this.state.disableRadio}/>
-</Row>
+            <Input name='orgType' type='radio' value='Individual Donation' label='Individual Donation' onClick={this.handleIndividual} disabled={this.state.disableRadio}/>
+            <Input name='orgType' type='radio' value='Organizational Donation' label='Organizational Donation' onClick={this.handleCompany} disabled={this.state.disableRadio}/>
+        </Row>
         </div>
-
       );
-
-
-                // <Button onClick={this.handleIndividual}>Individual</Button>
-                // <Button onClick={this.handleCompany}>Company</Button>
     }
 
   render() {
@@ -54,9 +49,9 @@ class App extends Component {
     }
     return (
       <div className="App">
-        <Modal header='Donate' trigger={<Button>Donate</Button>}>
-
-        </Modal>
+       <Header />
+       {this.showButtons()}
+       {form}
       </div>
     );
   }
