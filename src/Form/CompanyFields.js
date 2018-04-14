@@ -7,17 +7,18 @@ class CompanyFields  extends Component {
   render() {
     return (
       <Row>
-            <Input placeholder="Placeholder" s={6} label="First Name" />
+            <Input s={6} label="Organization Name" />
+            <Input s={6} label="Contact First Name" />
             <Input s={6} label="Last Name" />
-            <Input label="Company Name"/>
-            <Input type="email" label="Email" s={12} />
-            <Input label="phone" s={12} />
-            <Input label="neighbour" s={12} />
-            <Input label="Add Item" s={12} />
-            <label> Donate Before ?</label>
-            <Input type="radio" value="option1" checked={this.state.selectedOption === 'option1'}/>
-            <Input type="radio" value="option2" checked={this.state.selectedOption === 'option2'}/>
-            <Input type="radio" value="option3" checked={this.state.selectedOption === 'option3'}/>
+            <Input s={6} label="Street Address"/>
+            <Input s={6} label="City"/>
+            <Input s={6} label="Province"/>
+            <Input s={6} label="Postal Code" s={6}/>
+            <Input s={6} label="Street Address"/>
+            <Input s={6} type="email" label="Email" s={12} />
+            <Input s={6} label="phone" s={12} />
+            <Input s={6} label="Website"/>
+
         </Row>
     );
   }
