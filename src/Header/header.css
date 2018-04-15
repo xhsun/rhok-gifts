@@ -2,3 +2,12 @@ a.brand-logo {
     left: 0.5rem !important;
     padding: 0 !important;
 }
+
+nav ul li a{
+    color: black;
+    line-height: 100px;
+}
+
+nav{
+    height: 100px
+}
