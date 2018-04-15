@@ -39,19 +39,14 @@ class CompanyFields  extends Component {
                 <Input s={4} label="Email" validate><Icon>email</Icon></Input>
                 <Input s={4} label="Phone" validate><Icon>phone</Icon></Input>
 
-                <span class="card-title grey-text text-darken-4">Has your organization donated before?</span>
+                <Col s={12} className="yonistest"><span class="card-title grey-text text-darken-4 question">Has your organization donated before?</span></Col>
+
                 <Row >
                 <Col s={3} offset='s3'><Input name='donated-yes' type='checkbox' value='1' label='Yes' /></Col>
                 <Col s={3} ><Input name='donated-yes' type='checkbox' value='0' label='No' defaultValue='checked' /></Col>
 
-
                 </Row>
-
             </Row>
-
-
-
-            <Button waves='light'>Submit</Button>
         </Card>
     );
   }

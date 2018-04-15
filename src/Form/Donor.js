@@ -40,9 +40,6 @@ class Donor extends Component {
         }
         return (
             <div>
-                <Row >
-                    <Col s={4} m={4} l={4} ><h3>Donor Information</h3></Col>
-                </Row>
                 <div>
                     <Row>
                         <a name='orgType' onClick={(e)=>this.handleChange(1)} >Individual Donation</a>
@@ -50,8 +47,8 @@ class Donor extends Component {
                     </Row>
                 </div>
                 <Row>
-                  <Col s={4}>{form}</Col>
-                  <Col s={6}><DonationFields/></Col>
+                  <Col s={5}>{form}</Col>
+                  <Col s={7}><DonationFields/></Col>
 
                 </Row>
 
