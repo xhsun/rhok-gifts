@@ -11,3 +11,8 @@ nav ul li a{
 nav{
     height: 100px
 }
+
+nav .title{
+    color: #73CABF !important;
+    font-size: 20pt;
+}

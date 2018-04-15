@@ -2,18 +2,13 @@ import React, { Component } from 'react';
 import { Navbar, NavItem, Row, Col } from 'react-materialize';
 import './header.css'
 
-
 const img = (
   <Row>
     <Col s="6">
       <img src='/GiftsInKind.png' height='100' alt={"Gifts In Kind"} />
     </Col>
     <Col s="6">
-      <ul>
-        <li>
-          <a>GIFTS IN KIND</a>
-        </li>
-      </ul>
+      <p className="title">GIFTS IN KIND</p>
     </Col>
   </Row>)
 
