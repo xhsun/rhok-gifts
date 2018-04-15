@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { Button, Icon, Row, Input, Card, Col, Autocomplete} from 'react-materialize';
+import { Button, Icon, Row, Input, Card, Col, Autocomplete } from 'react-materialize';
 import './Form.css'
 
 
-class CompanyFields  extends Component {
+class CompanyFields extends Component {
 
   render() {
     return (
@@ -19,21 +19,21 @@ class CompanyFields  extends Component {
                 <Input s={8} label="Address" validate><Icon>home</Icon></Input>
                 <Input s={4} label="Postal Code"/>
 
-                <Input s={6} label="City" validate><Icon>location_on</Icon></Input>
+          <Input s={6} label="City" validate><Icon>location_on</Icon></Input>
 
-                <Row>
-                    <Input s={6} type='select' label="Provinces" defaultValue='ON'>
-                    <option value='AB'> Alberta</option>
-                    <option value='ON'> Ontario</option>
-                    <option value='BC'> British Colombia</option>
-                    <option value='NS'> Nova Scotia</option>
-                    <option value='QC'> Quebec</option>
-                    <option value='SK'> Saskatchewan</option>
-                    <option value='MN'> Manitoba</option>
-                    <option value='NF'> Newfoundland & Labrador</option>
-                    <option value='PEI'> Prince Edward Island</option>
-                    </Input>
-                </Row>
+          <Row>
+            <Input s={6} type='select' label="Provinces" defaultValue='ON'>
+              <option value='AB'> Alberta</option>
+              <option value='ON'> Ontario</option>
+              <option value='BC'> British Colombia</option>
+              <option value='NS'> Nova Scotia</option>
+              <option value='QC'> Quebec</option>
+              <option value='SK'> Saskatchewan</option>
+              <option value='MN'> Manitoba</option>
+              <option value='NF'> Newfoundland & Labrador</option>
+              <option value='PEI'> Prince Edward Island</option>
+            </Input>
+          </Row>
 
                 <Input s={12} label="Website" validate><Icon>language</Icon></Input>
                 <Input s={12} label="Email" validate><Icon>email</Icon></Input>
