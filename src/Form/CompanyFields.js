@@ -7,17 +7,17 @@ class CompanyFields  extends Component {
 
   render() {
     return (
-        <Card className="form-card" title= 'Donation Information'>
+        <Card className="form-card-organization" title= 'Donation Information'>
             <Row>
                 <Input s={12} label="Organization Name" validate><Icon>business</Icon></Input>
 
                 <Row>
-                  <Input s={6} label="Contact First Name" validate><Icon>account_circle</Icon></Input>
+                  <Input s={6} label="First Name" validate><Icon>account_circle</Icon></Input>
                   <Input s={6} label="Last Name"  validate><Icon>account_circle</Icon></Input>
                 </Row>
 
-                <Input s={9} label="Address" validate><Icon>home</Icon></Input>
-                <Input s={3} label="Postal Code"/>
+                <Input s={8} label="Address" validate><Icon>home</Icon></Input>
+                <Input s={4} label="Postal Code"/>
 
                 <Input s={6} label="City" validate><Icon>location_on</Icon></Input>
 
@@ -35,9 +35,9 @@ class CompanyFields  extends Component {
                     </Input>
                 </Row>
 
-                <Input s={4} label="Website" validate><Icon>language</Icon></Input>
-                <Input s={4} label="Email" validate><Icon>email</Icon></Input>
-                <Input s={4} label="Phone" validate><Icon>phone</Icon></Input>
+                <Input s={12} label="Website" validate><Icon>language</Icon></Input>
+                <Input s={12} label="Email" validate><Icon>email</Icon></Input>
+                <Input s={12} label="Phone" validate><Icon>phone</Icon></Input>
 
                 <Col s={12} className="yonistest"><span class="card-title grey-text text-darken-4 question">Has your organization donated before?</span></Col>
 

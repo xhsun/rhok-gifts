@@ -1,7 +1,13 @@
-.form-card {
+.form-card-oraganization {
     max-width: 600px;
     margin: 0 auto;
 }
+
+span.card-title.grey-text.text-darken-4.question {
+    margin-bottom: 20px;
+}
+
+
 
 .rhok {
     margin: 0 auto;
