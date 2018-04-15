@@ -51,8 +51,8 @@ class App extends Component {
        <Header />
          <div>
            <Row>
-             <Input name='orgType' type='radio' label='Individual Donation' onClick={this.handleIndividual.bind(this)}/>
-             <Input name='orgType' type='radio' label='Organizational Donation' onClick={this.handleCompany.bind(this)}/>
+             <Input name='orgType' type='radio' label='Individual' onClick={this.handleIndividual.bind(this)}/>
+             <Input name='orgType' type='radio' label='Organizational' onClick={this.handleCompany.bind(this)}/>
            </Row>
          </div>
          {form}
