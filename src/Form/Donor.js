@@ -1,5 +1,6 @@
 import CompanyFields from './CompanyFields.js'
 import IndividualFields from './IndividualFields.js'
+import DonationFields from './DonationFields.js'
 import { Row, Col, Input } from 'react-materialize';
 import React, { Component } from 'react';
 
@@ -48,7 +49,12 @@ class Donor extends Component {
                         <a name='orgType' onClick={(e)=>this.handleChange(2)}>Organizational Donation</a>
                     </Row>
                 </div>
-                {form}
+                <Row>
+                  <Col s={4}>{form}</Col>
+                  <Col s={6}><DonationFields/></Col>
+
+                </Row>
+
             </div>
         );
     }
