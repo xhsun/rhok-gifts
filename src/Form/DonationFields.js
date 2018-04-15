@@ -8,15 +8,23 @@ class DonationFields  extends Component {
         <Row>
             <Input placeholder="Donation Details" s={12} label="Donation Details" />
             <Input s={3} type='select' label="Donation Category">
-                <option value='1'>Donation Category</option>
-                <option value='2'>Option 2</option>
-                <option value='3'>Option 3</option>
+                <option value='Clothing'>Clothing</option>
+                <option value='Electronics'>Electronics</option>
+                <option value='Furniture'>Furniture</option>
+                <option value='Appliances'>Appliances</option>
+                <option value='Athletic Equipment'>Athletic Equipment</option>
+                <option value='Hygene Products'>Hygene Products</option>
+                <option value='Tickets'>Tickets</option>
+                <option value='School Supplies'>School Supplies</option>
+                <option value='Other'>Other</option>
             </Input>
+
             <Input s={3} type='select' label="Item Type">
                 <option value='1'>Item Category</option>
                 <option value='2'>Option 2</option>
                 <option value='3'>Option 3</option>
             </Input>
+
             <Input s={3} label="Qty"/>
             <Input s={3} label="Fair Market $"/>
             <Input s={3} name='on' type='date' label="Available Date" onChange={function(e, value) {}} />
@@ -27,7 +35,7 @@ class DonationFields  extends Component {
                 <option value='3'>Option 3</option>
             </Input>
             <Input s={3} type='select' label="Delivery/Pick up">
-                <option value='1'>Donation Category</option>
+                <option value='1'>Item Category</option>
                 <option value='2'>Option 2</option>
                 <option value='3'>Option 3</option>
             </Input>
